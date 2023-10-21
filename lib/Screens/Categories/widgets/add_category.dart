@@ -15,6 +15,7 @@ class CategoryAddScreen extends StatefulWidget {
 }
 
 class _CategoryAddScreenState extends State<CategoryAddScreen> {
+  final formKey = GlobalKey<FormState>();
   final TextEditingController _nameCont = TextEditingController();
   CategoryType? _selectedCategory;
 
@@ -26,7 +27,7 @@ class _CategoryAddScreenState extends State<CategoryAddScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
+    
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 232, 235, 235),
       appBar: AppBar(
