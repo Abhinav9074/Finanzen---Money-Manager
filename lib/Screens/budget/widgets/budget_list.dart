@@ -228,8 +228,8 @@ class _BudgetListState extends State<BudgetList> {
                                                     children: [
                                                      int.parse(data.currentAmount)<=int.parse(data.BudgetAmount)?Column(
                                                        children: [
-                                                         Text('₹${int.parse(data.BudgetAmount)-int.parse(data.currentAmount)}',style: TextStyle(fontFamily:'texgyreadventor-regular',fontSize: 20),),
-                                                         Text('Left',style: TextStyle(fontFamily:'texgyreadventor-regular',fontSize: 15,fontWeight: FontWeight.w900),),
+                                                         Text('₹${int.parse(data.BudgetAmount)-int.parse(data.currentAmount)}',style: TextStyle(fontFamily:'texgyreadventor-regular',fontSize: 10),),
+                                                         Text('Left',style: TextStyle(fontFamily:'texgyreadventor-regular',fontSize: 10,fontWeight: FontWeight.w900),),
                                                        ],
                                                      ):Text('Failed',style: TextStyle(fontFamily:'texgyreadventor-regular',color: Colors.red,fontSize: 15,fontWeight: FontWeight.w900),)
                                                     ],

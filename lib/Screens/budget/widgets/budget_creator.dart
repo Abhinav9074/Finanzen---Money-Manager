@@ -43,6 +43,7 @@ class _BudgetCreatorDialogueState extends State<BudgetCreatorDialogue> {
         Padding(
           padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
           child: TextFormField(
+            maxLength: 10,
             controller: _amount,
             keyboardType: TextInputType.numberWithOptions(),
             decoration: InputDecoration(

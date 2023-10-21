@@ -154,7 +154,7 @@ class _AddTransactionsSampleState extends State<AddTransactionsSample> {
                                   hint: Text(
                                     'Select Category ',
                                     style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 10,
                                         fontFamily: 'texgyreadventor-regular',
                                         color: Colors.white),
                                   ),
@@ -196,7 +196,7 @@ class _AddTransactionsSampleState extends State<AddTransactionsSample> {
                                 child: const Text(
                                   'Please Pick a Category',
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 10,
                                       fontFamily: 'texgyreadventor-regular',
                                       color: Colors.red),
                                 )),
@@ -209,60 +209,64 @@ class _AddTransactionsSampleState extends State<AddTransactionsSample> {
                           padding: const EdgeInsets.fromLTRB(0, 10, 120, 10),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(5),
-                            child: TextFormField(
-                              maxLength: 20,
-                              enableInteractiveSelection: false,
-                              controller: _purposeController,
-                              decoration: const InputDecoration(
-                                hintText: 'Purpose',
-                                hintStyle: TextStyle(
-                                    fontFamily: 'Raleway-VariableFont_wght',
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                                fillColor: Colors.white,
-                                filled: true,
-                                border: InputBorder.none,
+                            child: SizedBox(
+                              height: 60,
+                              child: TextFormField(
+                                maxLength: 20,
+                                enableInteractiveSelection: false,
+                                controller: _purposeController,
+                                decoration: const InputDecoration(
+                                  hintText: 'Purpose',
+                                  hintStyle: TextStyle(
+                                      fontFamily: 'Raleway-VariableFont_wght',
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600),
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  border: InputBorder.none,
+                                ),
+                                validator: (value) {
+                                  if (!RegExp(r'^\S+(?!\d+$)')
+                                      .hasMatch(value ?? '')) {
+                                    return 'Please enter a valid purpose.';
+                                  }
+                                  return null;
+                                },
                               ),
-                              validator: (value) {
-                                if (!RegExp(r'^\S+(?!\d+$)')
-                                    .hasMatch(value ?? '')) {
-                                  return 'Please enter a valid purpose.';
-                                }
-                                return null;
-                              },
                             ),
                           ),
                         ),
 
                         //Amount Field
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 120, 5),
+                          padding: const EdgeInsets.fromLTRB(0, 0, 120, 0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(5),
-                            child: TextFormField(
-                                maxLength: 10,
-                                controller: _amountController,
-                                keyboardType:
-                                    const TextInputType.numberWithOptions(),
-                                decoration: const InputDecoration(
-                                  label: Text(
-                                    'Amount',
-                                    style: TextStyle(
-                                        fontFamily: 'Raleway-VariableFont_wght',
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w600),
+                            child: SizedBox(
+                              height: 60,
+                              child: TextFormField(
+                                  maxLength: 10,
+                                  controller: _amountController,
+                                  keyboardType:
+                                      const TextInputType.numberWithOptions(),
+                                  decoration: const InputDecoration(
+                                    hintText: 'Amount',
+                                    hintStyle: TextStyle(
+                                          fontFamily: 'Raleway-VariableFont_wght',
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w600),
+                                    fillColor: Colors.white,
+                                    filled: true,
+                                    border: InputBorder.none,
                                   ),
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  border: InputBorder.none,
-                                ),
-                                validator: (value) {
-                                  if (!RegExp(r'^[0-9]+$')
-                                      .hasMatch(value ?? '')) {
-                                    return 'Please enter a valid amount.';
-                                  }
-                                  return null;
-                                }),
+                                  validator: (value) {
+                                    if (!RegExp(r'^[0-9]+$')
+                                        .hasMatch(value ?? '')) {
+                                      return 'Please enter a valid amount.';
+                                    }
+                                    return null;
+                                  }),
+                            ),
                           ),
                         ),
 
@@ -273,14 +277,14 @@ class _AddTransactionsSampleState extends State<AddTransactionsSample> {
                           children: [
                             Text('DATE : ',
                                 style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 10,
                                     fontFamily: 'texgyreadventor-regular',
                                     color: const Color.fromARGB(
                                         255, 255, 255, 255))),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
+                              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
                               child: SizedBox(
-                                height: 30,
+                                height: 20,
                                 child: ElevatedButton.icon(
                                     style: ButtonStyle(
                                         backgroundColor:
@@ -299,12 +303,12 @@ class _AddTransactionsSampleState extends State<AddTransactionsSample> {
                                     },
                                     icon: const FaIcon(
                                       FontAwesomeIcons.calendar,
-                                      size: 15,
+                                      size: 10,
                                     ),
                                     label: _selectedDate == null
                                         ? const Text('Select Date',
                                             style: TextStyle(
-                                                fontSize: 15,
+                                                fontSize: 10,
                                                 fontFamily:
                                                     'texgyreadventor-regular',
                                                 color: const Color.fromARGB(
@@ -326,7 +330,7 @@ class _AddTransactionsSampleState extends State<AddTransactionsSample> {
                                     child: const Text(
                                       'Please Pick a Date',
                                       style: TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 10,
                                           fontFamily: 'texgyreadventor-regular',
                                           color: Colors.red),
                                     )),

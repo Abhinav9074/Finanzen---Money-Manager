@@ -3,6 +3,7 @@ import 'package:money_manager/Screens/budget/widgets/balance_days.dart';
 import 'package:money_manager/Screens/budget/widgets/budget_creator.dart';
 import 'package:money_manager/Screens/budget/widgets/budget_list.dart';
 import 'package:money_manager/db/budget/budget_db.dart';
+import 'package:money_manager/db/category/category_db.dart';
 
 class BudgetScreen extends StatelessWidget {
   const BudgetScreen({super.key});
@@ -35,7 +36,8 @@ class BudgetScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showDialog(
+          if(CategoryDb().expenseCategoryList.value.isNotEmpty){
+            showDialog(
               context: context,
               builder: (ctx) {
                 return SimpleDialog(
@@ -49,6 +51,14 @@ class BudgetScreen extends StatelessWidget {
                           children: [BudgetCreatorDialogue(ctx: context,)],
                 );
               });
+          }else{
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Please Add Some Expense Category',style: TextStyle(
+                          fontSize: 17,
+                          
+                          fontFamily: 'texgyreadventor-regular',
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.w400),),behavior: SnackBarBehavior.floating,));
+          }
         },
         child: Icon(Icons.add),
       ),

@@ -18,7 +18,7 @@ class AllTransactions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var tileHeightPortrait = MediaQuery.of(context).size.height > 800
-        ? MediaQuery.of(context).size.height * 0.08
+        ? MediaQuery.of(context).size.height * 0.1
         : MediaQuery.of(context).size.height * 0.1;
     var tileHeightLandscape = MediaQuery.of(context).size.height * 0.2;
     var textHeightPortrait = MediaQuery.of(context).size.width * 0.047;

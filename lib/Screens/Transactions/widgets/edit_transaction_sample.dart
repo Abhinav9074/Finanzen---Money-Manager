@@ -171,12 +171,12 @@ class _EditTransactionsSampleState extends State<EditTransactionsSample> {
                                   icon: FaIcon(
                                     FontAwesomeIcons.angleDown,
                                     color: Colors.white,
-                                    size: 15,
+                                    size: 10,
                                   ),
                                   hint: Text(
                                     'Select Category ',
                                     style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 10,
                                         fontFamily: 'texgyreadventor-regular',
                                         color: Colors.white),
                                   ),
@@ -192,7 +192,7 @@ class _EditTransactionsSampleState extends State<EditTransactionsSample> {
                                         child: e.isDeleted != true
                                             ? Text(e.categoryName,
                                                 style: const TextStyle(
-                                                    fontSize: 15,
+                                                    fontSize: 10,
                                                     fontFamily:
                                                         'texgyreadventor-regular',
                                                     color: Colors.white))
@@ -218,7 +218,7 @@ class _EditTransactionsSampleState extends State<EditTransactionsSample> {
                                 child: const Text(
                                   'Please Pick a Category',
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 10,
                                       fontFamily: 'texgyreadventor-regular',
                                       color: Colors.red),
                                 )),
@@ -232,7 +232,7 @@ class _EditTransactionsSampleState extends State<EditTransactionsSample> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(5),
                             child: TextFormField(
-                              maxLength: 20,
+                              maxLength: 10,
                               enableInteractiveSelection: false,
                               controller: _purposeController,
                               decoration: const InputDecoration(
@@ -271,7 +271,7 @@ class _EditTransactionsSampleState extends State<EditTransactionsSample> {
                                     'Amount',
                                     style: TextStyle(
                                         fontFamily: 'Raleway-VariableFont_wght',
-                                        fontSize: 15,
+                                        fontSize: 10,
                                         fontWeight: FontWeight.w600),
                                   ),
                                   fillColor: Colors.white,
@@ -295,14 +295,14 @@ class _EditTransactionsSampleState extends State<EditTransactionsSample> {
                           children: [
                             Text('DATE : ',
                                 style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 10,
                                     fontFamily: 'texgyreadventor-regular',
                                     color: const Color.fromARGB(
                                         255, 255, 255, 255))),
                             Padding(
                               padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
                               child: SizedBox(
-                                height: 30,
+                                height: 20,
                                 child: ElevatedButton.icon(
                                   style: ButtonStyle(
                                       backgroundColor: MaterialStatePropertyAll(

@@ -76,7 +76,7 @@ class _TransactionsScreenState extends State<TransactionsScreen>
               // ignore: sized_box_for_whitespace
               Container(
                   width: double.infinity,
-                  height: 40,
+                  height:55,
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(15, 5, 15, 0),
                     child: TextFormField(
